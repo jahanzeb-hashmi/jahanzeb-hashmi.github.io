@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jahanzeb Hashmi — Senior HPC Architect</title>
+<meta name="author" content="Jahanzeb Hashmi">
+<meta name="description" content="Jahanzeb Hashmi — Senior HPC Architect at NVIDIA. Performance modeling, GPU/accelerator co-design, and collective communication for next-generation HPC/AI systems.">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M56DVX9EYF"></script>
@@ -8,515 +13,645 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-M56DVX9EYF');
-</script>
-
-
-<title>Jahanzeb Hashmi Homepage</title>
-
-  <meta name="author" content="Jahanzeb Hashmi">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="./files/stylesheet.css">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.top-container {
-  background-color: #f1f1f1;
-  padding: 0px;
-  text-align: center;
-}
-
-.left {
-    float: left;
-    width: 170px;
-    margin: auto;
-}
-
-.header {
-  padding: 1px 16px;
-  background: rgb(177, 218, 253);
-  color: #3a413a;
-}
-
-.content {
-  font-size: xx-small;
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 102px;
-}
-</style>
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q99V36MX5N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
   gtag('config', 'G-Q99V36MX5N');
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+  :root{
+    --bg:#12151a;
+    --bg-elevated:#181c22;
+    --bg-card:#1c2129;
+    --line:#272d36;
+    --text:#e9e7e1;
+    --text-dim:#9aa2ab;
+    --text-faint:#5e6670;
+    --copper:#c9824a;
+    --copper-dim:#8a5c37;
+    --signal:#5fd4c4;
+    --danger:#d6726f;
+    --max-w:980px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  a{color:var(--signal); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+  .wrap{max-width:var(--max-w); margin:0 auto; padding:0 28px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(18,21,26,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:60px;
+  }
+  .brand{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600; font-size:16px; color:var(--text);
+  }
+  .brand span{color:var(--copper);}
+  .navlinks{display:flex; gap:26px; font-size:14px;}
+  .navlinks a{color:var(--text-dim);}
+  .navlinks a:hover{color:var(--text); text-decoration:none;}
+  #navToggle{display:none;}
+  .burger{display:none; background:none; border:none; color:var(--text); font-size:22px; cursor:pointer;}
+
+  @media (max-width:640px){
+    .navlinks{
+      position:absolute; top:60px; left:0; right:0;
+      background:var(--bg-elevated);
+      flex-direction:column; gap:0;
+      border-bottom:1px solid var(--line);
+      max-height:0; overflow:hidden;
+      transition:max-height .25s ease;
+    }
+    .navlinks a{padding:14px 28px; border-top:1px solid var(--line);}
+    #navToggle:checked ~ .navlinks{max-height:400px;}
+    .burger{display:block;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:80px 0 60px;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:13px;
+    color:var(--signal);
+    letter-spacing:0.04em;
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:8px; height:8px; border-radius:50%;
+    background:var(--signal);
+    box-shadow:0 0 8px var(--signal);
+  }
+  .hero h1{font-size:44px; line-height:1.1; margin-bottom:14px;}
+  .hero .tagline{
+    color:var(--text-dim);
+    font-size:17px;
+    max-width:46ch;
+    margin-bottom:28px;
+  }
+  .hero .tagline strong{color:var(--text); font-weight:500;}
+  .cta-row{display:flex; flex-wrap:wrap; gap:12px;}
+  .btn{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:14px; font-weight:500;
+    padding:11px 18px;
+    border-radius:6px;
+    border:1px solid var(--line);
+    color:var(--text);
+    display:inline-flex; align-items:center; gap:8px;
+    transition:border-color .15s ease, background .15s ease;
+  }
+  .btn:hover{border-color:var(--copper); background:var(--bg-card); text-decoration:none;}
+  .btn.primary{background:var(--copper); border-color:var(--copper); color:#161414;}
+  .btn.primary:hover{background:#d68f5d;}
+
+  .roofline{width:100%; height:auto;}
+  .roofline .grid-line{stroke:#262c34; stroke-width:1;}
+  .roofline .axis{stroke:#3a414b; stroke-width:1.4;}
+  .roofline .curve{
+    fill:none; stroke:var(--copper); stroke-width:2.5;
+    stroke-dasharray:520; stroke-dashoffset:520;
+    animation:draw 1.6s ease forwards .3s;
+  }
+  .roofline .knee{
+    fill:var(--signal);
+    filter:drop-shadow(0 0 6px var(--signal));
+    animation:pop .4s ease forwards 1.7s;
+    opacity:0; transform-origin:center;
+  }
+  .roofline .lbl{font-family:'JetBrains Mono', monospace; font-size:11px; fill:var(--text-faint);}
+  @keyframes draw{to{stroke-dashoffset:0;}}
+  @keyframes pop{from{opacity:0; transform:scale(0);} to{opacity:1; transform:scale(1);}}
+  @media (prefers-reduced-motion:reduce){
+    .roofline .curve{stroke-dashoffset:0; animation:none;}
+    .roofline .knee{opacity:1; animation:none;}
+  }
+
+  @media (max-width:800px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .hero{padding:48px 0 40px;}
+    .hero h1{font-size:32px;}
+    .roofline{order:-1; max-width:340px; margin:0 auto 8px;}
+  }
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 0; border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{display:flex; align-items:baseline; gap:14px; margin-bottom:32px;}
+  .section-head h2{font-size:24px; color:var(--text);}
+  .section-head .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:12px; color:var(--text-faint);
+  }
+
+  /* about */
+  .about-grid{display:grid; grid-template-columns:200px 1fr; gap:40px; align-items:start;}
+  .about-grid img{
+    width:100%; border-radius:10px; border:1px solid var(--line);
+    filter:grayscale(15%);
+  }
+  .about-grid p{color:var(--text-dim); margin:0 0 16px;}
+  .about-grid strong.role{
+    color:var(--danger); font-weight:600;
+  }
+  @media (max-width:640px){
+    .about-grid{grid-template-columns:1fr;}
+    .about-grid img{max-width:160px;}
+  }
+
+  /* highlight cards */
+  .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .card{
+    background:var(--bg-card); border:1px solid var(--line); border-radius:10px;
+    padding:22px; position:relative; overflow:hidden;
+  }
+  .card::before{
+    content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+    background:var(--copper);
+  }
+  .card h3{font-size:16px; margin-bottom:8px; color:var(--text);}
+  .card p{color:var(--text-dim); font-size:14.5px; margin:0;}
+  @media (max-width:640px){.cards{grid-template-columns:1fr;}}
+
+  /* experience timeline */
+  .timeline{position:relative; padding-left:26px;}
+  .timeline::before{
+    content:""; position:absolute; left:5px; top:6px; bottom:6px; width:1px;
+    background:var(--line);
+  }
+  .job{position:relative; margin-bottom:42px;}
+  .job:last-child{margin-bottom:0;}
+  .job::before{
+    content:""; position:absolute; left:-26px; top:5px;
+    width:11px; height:11px; border-radius:50%;
+    background:var(--bg); border:2px solid var(--copper);
+  }
+  .job .when{
+    font-family:'JetBrains Mono', monospace; font-size:12.5px; color:var(--signal);
+    margin-bottom:4px; display:block;
+  }
+  .job h3{font-size:18px; margin-bottom:2px;}
+  .job .org{color:var(--text-dim); font-size:14.5px; margin-bottom:12px; display:block;}
+  .job ul{margin:0; padding-left:20px; color:var(--text-dim); font-size:14.5px;}
+  .job li{margin-bottom:6px;}
+
+  /* skills */
+  .skill-group{margin-bottom:18px;}
+  .skill-group h4{
+    font-family:'JetBrains Mono', monospace; font-weight:400; font-size:12.5px;
+    color:var(--text-faint); text-transform:uppercase; letter-spacing:.05em;
+    margin-bottom:10px;
+  }
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    font-size:13px; color:var(--text-dim);
+    border:1px solid var(--line); border-radius:20px;
+    padding:5px 12px; background:var(--bg-elevated);
+  }
+
+  /* publications */
+  .pub{
+    padding:18px 0; border-bottom:1px solid var(--line);
+  }
+  .pub:last-child{border-bottom:none;}
+  .pub .title{font-size:15.5px; color:var(--text); font-weight:500; margin-bottom:5px;}
+  .pub .authors{font-size:13.5px; color:var(--text-dim); margin-bottom:4px;}
+  .pub .authors .me{color:var(--copper); font-weight:600;}
+  .pub .venue{font-size:13px; color:var(--text-faint); font-style:italic;}
+  .badge{
+    display:inline-block; font-family:'JetBrains Mono', monospace; font-size:11px;
+    color:var(--danger); border:1px solid var(--danger); border-radius:4px;
+    padding:2px 7px; margin-left:8px; vertical-align:middle;
+  }
+  .pub .links a{font-size:13px; margin-right:12px;}
+  .pub-note{color:var(--text-dim); font-size:14.5px; margin-bottom:22px;}
+
+  /* two-col: service / news */
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:48px;}
+  @media (max-width:760px){.two-col{grid-template-columns:1fr; gap:36px;}}
+  .feed{list-style:none; margin:0; padding:0;}
+  .feed li{
+    padding:12px 0; border-bottom:1px solid var(--line);
+    font-size:14.5px; color:var(--text-dim);
+  }
+  .feed li:last-child{border-bottom:none;}
+  .feed .d{
+    font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--signal);
+    display:block; margin-bottom:3px;
+  }
+
+  /* education */
+  .edu-item{margin-bottom:20px;}
+  .edu-item:last-child{margin-bottom:0;}
+  .edu-item .deg{font-size:15.5px; color:var(--text); font-weight:500;}
+  .edu-item .inst{color:var(--text-dim); font-size:14px;}
+  .edu-item .yr{font-family:'JetBrains Mono', monospace; font-size:12.5px; color:var(--text-faint);}
+
+  /* footer */
+  footer{padding:48px 0 60px; text-align:center;}
+  footer .name{font-size:18px; margin-bottom:14px;}
+  .social-row{display:flex; justify-content:center; gap:22px; font-size:14px;}
+  .social-row a{color:var(--text-dim); display:inline-flex; align-items:center; gap:7px;}
+  .social-row a:hover{color:var(--text); text-decoration:none;}
+  footer .copy{color:var(--text-faint); font-size:12.5px; margin-top:28px; font-family:'JetBrains Mono', monospace;}
+</style>
 </head>
-
-
-
 <body>
 
-<!-- 
--->
-<div class="header" id="myHeader">
+<nav>
+  <div class="wrap">
+    <div class="brand">Jahanzeb <span>Hashmi</span></div>
+    <input type="checkbox" id="navToggle">
+    <label class="burger" for="navToggle">&#9776;</label>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#updates">Updates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-  <h3><center> Jahanzeb's Homepage</center></h3>
-</div>
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">CURRENTLY AT NVIDIA</div>
+      <h1>Jahanzeb Hashmi</h1>
+      <p class="tagline">
+        <strong>Senior Architect</strong> <!--modeling the speed-of-light limits of next-generation
+        GPUs, CPUs, and interconnects — and closing the gap between what silicon can do and what it actually delivers.
+        -->
+      </p>
+      
+    
+      <div class="cta-row">
+        <a class="btn primary" href="files/Resume_Jahanzeb.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a class="btn" href="files/CV_Jahanzeb.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=ut1D3NYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      </div>
+    </div>
+    
 
+    <!--
+    <svg class="roofline" viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Roofline performance model illustration">
+      
+      <g class="grid-line">
+        <line x1="60" y1="40" x2="60" y2="280"></line>
+        <line x1="60" y1="280" x2="440" y2="280"></line>
+        <line x1="60" y1="210" x2="440" y2="210"></line>
+        <line x1="60" y1="140" x2="440" y2="140"></line>
+        <line x1="150" y1="40" x2="150" y2="280"></line>
+        <line x1="260" y1="40" x2="260" y2="280"></line>
+        <line x1="350" y1="40" x2="350" y2="280"></line>
+      </g>
+      
+      <g class="axis">
+        <line x1="60" y1="280" x2="440" y2="280"></line>
+        <line x1="60" y1="280" x2="60" y2="40"></line>
+      </g>
+      
+     
+      
+      <path class="curve" d="M 60 280 L 230 105 L 440 105"></path>
+      <circle class="knee" cx="230" cy="105" r="5"></circle>
 
+      <text class="lbl" x="66" y="200" transform="rotate(-90 66 200)" text-anchor="middle">PERFORMANCE (FLOP/s)</text>
+      <text class="lbl" x="250" y="305" text-anchor="middle">OPERATIONAL INTENSITY (FLOP/Byte)</text>
+      <text class="lbl" x="115" y="260" fill="#8a91998">memory-bound</text>
+      <text class="lbl" x="330" y="95">compute-bound</text>
+    </svg>
+    --> 
+  </div>
+</header>
 
-<script>
-window.onscroll = function() {myFunction()};
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head"><h2>About</h2><span class="tag">// summary</span></div>
+    <div class="about-grid">
+      <img src="./files/pic-3.jpeg" alt="Jahanzeb Hashmi">
+      <div>
+        <p>
+          I am a <strong class="role">Senior Architect (HPC) at NVIDIA</strong>, where I primarily work on HW/SW co-design of key HPC/AI workloads. I lead cross-organization working groups responsible for 
+          architectural design trade-offs, performance modeling and projections, and competitive analysis of NVIDIA and competitive platforms.
+          I work on establishing speed-of-light bounds for performance, energy efficiency, and TCO for NVIDIA's leadership class systems such as multi-node NVLINK. 
+          My work influences NVIDIA's GPU roadmap and provides actionable insights to the leadership. 
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+        </p>
+        <p>
+          Before NVIDIA, I was a Senior Research Associate at
+          <a href="https://www.osu.edu" target="_blank" rel="noopener noreferrer">The Ohio State University</a>,
+          working in the <a href="http://nowlab.cse.ohio-state.edu/" target="_blank" rel="noopener noreferrer">Network-Based Computing Laboratory</a>
+          on <a href="http://mvapich.cse.ohio-state.edu/" target="_blank" rel="noopener noreferrer">MVAPICH2</a>, a high-performance
+          MPI library used across supercomputing centers worldwide. My focus was GPU-aware MPI for RDMA
+          networks on AMD and NVIDIA hardware, hierarchical collective algorithms for scalable scientific
+          and deep learning workloads, zero-copy data movement for sparse layouts, and performance
+          engineering of parallel applications on multi-petaflop systems.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</section>
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
+<!-- ================= HIGHLIGHTS ================= -->
+<section id="highlights">
+  <div class="wrap">
+    <div class="section-head"><h2>Technical Focus</h2><span class="tag">// what I work on</span></div>
+    <div class="cards">
 
+      <div class="card">
+        <h3>HW/SW Co-design</h3>
+        <p>Workload-aware architecture design trade-off across NVIDIA and competitive platforms that directly influences NVIDIA product roadmap for next-gen GPU, CPU, and networks.</p>
+      </div>        
 
-
-  <table style="width:100%;max-width:850px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <tr style="padding:0px">
-  <td style="padding:0px">
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"> 
-		
-	<tbody>
-          <tr style="padding:0px">
-
-            <!-- <td style="padding:2.5%;width:40%;max-width:40%"> -->
-			<td>
-			 <!-- <div style="padding:50px"> -->
-			 <div style="padding:70px 50px 50px 50px">  <!-- TOP RIGHT BOTTOM LEFT -->
-			 </div>
-			 <br>
-             <img style="width:90%;max-width:90%" alt="profile photo" src="./files/pic-3.jpeg" class="hoverZoomLink">
-
-	         <ul style='list-style: none; margin-left: -40px;font-size:20px;'>
-				<li style="font-size:16px">
-					
-	<!--				<a class="fa fa-github" href="https://github.com/jahanzeb-hashmi">
-							<span class="username" style='font-family: Arial'>GitHub</span>
-						</a>
-					/
-	-->
-	<!--
-					<a class="fa fa-linkedin" href="https://www.linkedin.com/in/jahanzebhashmi/">
-							<span class="username" style='font-family: Arial'>LinkedIn</span>
-						</a>
-			  /
-						<a class="fa fa-twitter" href="https://twitter.com/JM_Hashmi">
-								<span class="username" style='font-family: Arial'>Twitter</span>
-						</a>	
-	-->			
-		
-				</li>
-			</ul>
-			  
-			 <p> 
-<!--				<img style="width:90%;max-width:90%" alt="contact" src="./files/contact.jpeg" class="hoverZoomLink"> 
--->
-			 </p>
-            </td>
-            <td style="padding:2.5%;width:70%;vertical-align:middle">
-			<br><br>
-              <p style="text-align:center">
-                <name>Jahanzeb Hashmi</name> 
-				<br><br>
-                <!-- <font>hashmi [dot] 29 [AT] osu.edu </font> -->
-              </p>
-              
-			  <p style="text-align:center">
-                <a href="files/Resume_Jahanzeb.pdf" target="_blank" rel="noopener noreferrer"> <b style="font-size:18px"> Resume </b> </a> &nbsp;/&nbsp;
-                <a href="files/CV_Jahanzeb.pdf" target="_blank" rel="noopener noreferrer"> <b style="font-size:18px"> CV </b> </a> &nbsp;/&nbsp;	
-				<a href="https://scholar.google.com/citations?user=ut1D3NYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"> <b style="font-size:18px"> Google Scholar </b></a> 
-              </p>
-			 
-			  
-			  <!--
-			  <p style="text-align:center">
-                <a href="https://scholar.google.com/citations?user=ut1D3NYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/jahanzeb-hashmi-40aaa712/ target="_blank" rel="noopener noreferrer"">LinkedIn</a> &nbsp;/&nbsp;
-				<a href="https://github.com/hashmij" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://twitter.com/JM_Hashmi" target="_blank" rel="noopener noreferrer">Twitter</a> &nbsp;&nbsp;
-              </p>
-			  -->
-                <p> 	
-                    <b style="color:rgb(214, 114, 114)">I am a Senior Architect (HPC) at NVIDIA where I am working on designing next-generation GPUs, CPUs, and high-speed interconnects as part of the architecture group</b>
-                </p>
-
-				<p>
-				Previously, I worked as a Senior Research Associate at <a href="https://www.osu.edu" target="_blank" rel="noopener noreferrer">The Ohio State University (OSU)</a> where I worked at <a href="http://nowlab.cse.ohio-state.edu/" target="_blank" rel="noopener noreferrer">Network Based Computing Laboratory (NBCL)</a>. 
-<!--
-                I worked on design and development of scalable software systems that are the backbone of scientific applications and Deep Learning (DL) frameworks running on multi-petaflop supercomputers (e.g., <a href="https://www.tacc.utexas.edu/systems/frontera" target="_blank" rel="noopener noreferrer">TACC Frontera</a>, <a href="https://www.sdsc.edu/services/hpc/expanse" target="_blank" rel="noopener noreferrer">SDSC Expanse</a>) and HPC Clouds (e.g., <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/hbv2-series" target="_blank" rel="noopener noreferrer">Microsoft Azure</a> and Amazon <a href="https://aws.amazon.com/hpc/parallelcluster/" target="_blank" rel="noopener noreferrer">AWS Parallel Cluster</a>). 
-
-
-				</p>
-				<p>
--->
-
-				I mainly worked on high-performance MPI library <a href="http://mvapich.cse.ohio-state.edu/" target="_blank" rel="noopener noreferrer">MVAPICH2</a> with focus on optimizing MPI runtime for emerging HPC and cloud systems. I primarily worked on the design and development of GPU-aware MPI library for RDMA networks with AMD/NVIDIA hardware, hierarchical  MPI collectives for scalable scientific and deep learning applications, efficient data-movement for sparse data layouts, high-level abstractions for asynchronous communication offloading, and performance engineering of parallel applications on multi-petaflop supercomputers and cloud systems.
-				</p>
-<!--				<p>
-				I research on developing novel algorithms and optimized software implementations of communication stacks 
-				that help applications scale on large-scale HPC and cloud systems. 
-				I focus on exploit high-concurrency in modern multi-core and many-core hardware such as CPUs, GPUs, and accelerators and 
-				high-throughput networks (e.g., RDMA) to improve the performance of communication libraries.
-				</p>
--->
-				</td>
-				</tr>
-	</tbody>
-   </table>
-
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-            <tr>
-			<td>
-			</td>
-            <td style="padding:0px;width:100%;vertical-align:middle">
-              <heading><b style="color:#6699ff">Service</b></heading>
-              <ul>
-			  <li>
-				Jun 2023 - I will be serving as a member of the Technical Program Committee at HOT Interconnects 2023. Please consider submitting your work at https://hoti.org/ <br>
-			  </li>		  
-			  <li>
-				Jun 2022 - I will be serving as a member of the Technical Program Committee at HOT Interconnects 2022 <br>
-			  </li>		  
-			  
-			  <li>
-                  Sep 2021 - I will be serving as a member of the Technical Program Committee at IPDPS 2022 (Architecture Track). <br> 
-			  </li>		  
-			  <li>
-				Aug 2021 - I will be serving as Technical Reviewer for IEEE MICRO journal <br>
-			  </li>		  
-			  <li>
-				Jun 2021 - I will be serving as a member of Technical Program Committee at HOT Interconnects 2021 <br>
-			  </li>		  
-			  </ul>
-            </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="card">
+        <h3>Performance Engineering</h3>
+        <p>Bottleneck analysis of key HPC/AI applications from chip-level microarchitecture up through full datacenter-scale systems.</p>
+      </div>
 
 
 
-   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"> 
-   <tbody>
-          <tr style="padding:0px">
-		  <td>
-		  </td>
-		  <td>
+      <div class="card">
+        <h3>Projections and Competitive Analysis</h3>
+        <p>Performance modeling and projections, scaling-limiter analysis, and actionable insights leading to improved product designs.</p>
+      </div>
 
-			<heading><b style="color:#6699ff">Education</b></heading>
-				<p>
-				I completed my Ph.D. in <a href="https://cse.osu.edu/" target="_blank" rel="noopener noreferrer">Computer Science and Engineering</a> from OSU where I was advised by Prof. <a href="https://web.cse.ohio-state.edu/~panda.2" target="_blank" rel="noopener noreferrer">D. K. Panda</a>. 
-				Prior to joining OSU, I did my Masters from <a href="https://www.ajou.ac.kr/en" target="_blank" rel="noopener noreferrer">Ajou University</a>, South Korea where I worked on energy-efficient High Performance Computing (HPC) using low-powered ARM SoC based cluster applications. I did my B.S from <a href="https://nust.edu.pk/" target="_blank" rel="noopener noreferrer">National University of Science and Technology (NUST)</a>, Pakistan where I worked on performance characterization and parallelization of numerical simulation codes e.g., particle simulation with SPH methods on multi-core using MPI, OpenMP, and CUDA.
-				<!-- During my Ph.D. research, I worked on various projects involving MPI, PGAS, distributed Deep Learning, Task-based models, and performance analysis. I designed a shared address space based inter-process communication framework for MPI to achieve truly zero-copy communication e.g., point-to-point and collectives (e.g., MPI_Allreduce). 
-				These designs helped in scaling CPU-based data-parallel training on many-core systems like Intel KNL. These designs are released in MVAPICH2 and are still offering orders of magnitude higher performance than the state-of-the-art communication libraries.
-				-->
-				
-				</p>
-	          
-            </td>
-          </tr>
-        </tbody>
-	</table>
+      <div class="card">
+        <h3>Communication Libraries (MPI, SHMEM, NCCL)</h3>
+        <p>Design and development of GPU-aware communication libraries focusing collective communications for NVIDIA/AMD multi-GPU systems with RDMA networks.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-            <tr>
-			<td>
-			</td>
-            <td style="padding:0px;width:100%;vertical-align:middle">
-              <heading><b style="color:#6699ff">Recent Updates</b></heading>
-              <ul>
-			   <li>				
-				Dec 2021 - Our paper got selected as <b style="color:rgb(214, 114, 114)">Best Paper Finalist</b> at HiPC'21 <br>
-			  </li>				
-			  
-              <li>
-				Sep 2021 - Co-authored work on designing architecture-aware communication trees has been accepted to HiPC'21 <br>
-			  </li>		  
-			  
-              <li>
-				Mar 2021 - Co-authored work on designing ROCm-aware MPI library has been accepted to ISC'21 <br>
-			  </li>		  
-			  
-			  <li>
-				Mar 2021 - Co-authored work "BluesMPI" has been accepted to ISC'21 <br>
-			  </li>		  
-			  <li>
-				Oct 2020 - Co-authored work "Blink" has been accepted to HiPC'20 <br>
-			  </li>		  
-			  <li>
-				Jun 2020 - Co-authored work "GEMS" has been accepted to SC'20 <br>
-			  </li>
-			   <li>
-				Jun 2020 - I started working full-time as a Senior Research Associate Engineer at <a href="http://nowlab.cse.ohio-state.edu/" target="_blank" rel="noopener noreferrer">NBCL</a> <br>
-			  </li>				
-			   <li>				
-				May 2020 - I have successfully defended my Ph.D. thesis (<a href="files/talks/defense_talk.pdf">Slides</a>) <br>
-				</li>
-			   <li>				
-				May 2020 - "FALCON-X" is accepted to JPDC special issue <br>
-			  </li>				
-			   <li>				
-				Jan 2020 - Our work on efficient MPI topologies for HPC Clouds got accepted to IPDPS'20 <br>
-			  </li>				
-			   <li>				
-				May 2019 - I have passed my Ph.D. candidacy exam (<a href="files/talks/candidacy_talk.pdf">Slides</a>) <br>
-			  </li>				
-			   <li>				
-				Mar 2019 - "FALCON" got nominated for the <b style="color:rgb(214, 114, 114)"> Best Paper Finalist</b> at IPDPS'19 <br>
-			  </li>				
-			  <li>				
-				Mar 2019 - Our paper on characterizing shared-address-space MPI collectives got accepted to CCGrid'19 <br>
-			  </li>	
-			  
-			  <li>
-			    Dec 2018 - Our paper "FALCON" on efficient processing of MPI derived datatypes got accepted to IPDPS'19 <br>
-			  </li>
-			  
-			  <li>				
-				Sep 2018 - I presented co-authored paper at Cluster'18 that won <b style="color:rgb(214, 114, 114)">Best Paper Award</b> <br>
-			  </li>
-			
-			  <li>
-				Jul 2018 - Co-authored paper on co-operative rendezvous protocols got nominated for <b style="color:rgb(214, 114, 114)">Best Paper Finalist</b> at SC'18
-			  </li>
-			  
-			  <li>
-				May 2018 - I presented our shared-address-space MPI runtime work at IPDPS'18 at Vancouver, Canada (<a href="files/talks/ipdps18.pdf">Slides</a>) <br>
-			  </li>
-			  <li>
-			    Apr 2018 - I gave a talk at <a href="https://www.ixpug.org/" target="_blank" rel="noopener noreferrer">IXPUG</a> held at <a href="https://www.kaust.edu.sa/en" target="_blank" rel="noopener noreferrer">KAUST</a>, Saudi Arabia (<a href="files/ixpug-kaust.jpg" target="_blank" rel="noopener noreferrer">Group Photo</a>) (<a href="files/talks/ixpug18-kaust.pdf">Slides</a>)  <br>
-			   <li>				
-				Dec 2018 - Our paper on sparse non-contigous MPI datatypes (FALCON) is accepted to IPDPS'19 <br>
-			   </li>	
-			   <li>				
-				Jan 2018 - Our work on designing shared-address-space MPI runtime is accepted to IPDPS'18 <br>
-			  </li>
-			  </ul>
-            </td>
-            </tr>
-          </tbody>
-        </table>
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head"><h2>Experience</h2><span class="tag">// 2015 — present</span></div>
+    <div class="timeline">
+      <div class="job">
+        <span class="when">MAR 2021 — PRESENT</span>
+        <h3>Senior High Performance Compute Architect</h3>
+        <span class="org">NVIDIA Corporation, USA</span>
+        <ul>
+          <li>Model speed-of-light system performance (compute and communication) to set GPU utilization roofline targets for next-generation accelerator hardware.</li>
+          <li>Identify scaling limiters and co-design applications and communication libraries for maximum architecture-allowed performance and efficiency.</li>
+          <li>Lead the HPC performance projections working group evaluating current and next-gen accelerator architectures for key HPC and AI/LLM workloads.</li>
+          <li>Lead the HPC competitive analysis working group, projecting performance from kernel/chip-level analysis up to full-scale datacenter architecture.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <span class="when">JUN 2020 — MAR 2021</span>
+        <h3>Senior Research Associate</h3>
+        <span class="org">The Ohio State University, USA</span>
+        <ul>
+          <li>Designed a high-performance MPI library for next-gen HPC/cloud systems spanning multi-core CPUs and GPUs (NVIDIA, AMD).</li>
+          <li>Led design of a generalized hierarchical MPI collective communications framework optimized for modern CPU+GPU node architectures.</li>
+          <li>Led MVAPICH2-GDR, a GPU-aware MPI library for NVIDIA/AMD multi-GPU systems, from architecture through production deployment.</li>
+          <li>Mentored Ph.D. and M.S. students on communication runtime design for CPUs, GPUs, and high-speed interconnects.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <span class="when">AUG 2015 — MAY 2020</span>
+        <h3>Graduate Research Associate</h3>
+        <span class="org">The Ohio State University, USA</span>
+        <ul>
+          <li>Designed an adaptive, topology-aware algorithm mapping MPI processes to hardware cores based on communication patterns of AI/HPC workloads.</li>
+          <li>Collaborated on efficient parallelization of large-scale distributed DNN training (data- and model-parallel) across CPU/GPU systems.</li>
+          <li>Designed a zero-copy XPMEM-based inter-process communication layer for manycore/multi-GPU architectures.</li>
+          <li>Designed a data-layout caching algorithm mitigating MPI derived-datatype translation costs — Best Paper Award nominee, IPDPS '19.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head"><h2>Skills</h2><span class="tag">// tools &amp; stacks</span></div>
+    <div class="skill-group">
+      <h4>GPU &amp; Accelerator Systems</h4>
+      <div class="chips">
+        <span class="chip">CUDA / HIP</span><span class="chip">NCCL</span>
+        <span class="chip">GPU-aware MPI/SHMEM</span><span class="chip">NVIDIA Nsight Suite</span>
+        <span class="chip">Multi-GPU/Multi-node Profiling</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Performance Engineering</h4>
+      <div class="chips">
+        <span class="chip">Roofline Modeling</span><span class="chip">FLOPs / Bandwidth Analysis</span>
+        <span class="chip">Interconnect Throughput</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>System Design</h4>
+      <div class="chips">
+        <span class="chip">HW/SW Co-design</span><span class="chip">End-to-end Perf/Power/TCO Optimization</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <h4>Languages</h4>
+      <div class="chips">
+        <span class="chip">C</span><span class="chip">C++</span><span class="chip">Python</span><span class="chip">Java</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <heading style="padding: 0px"><b style="color:#6699ff">Select Publications</b></heading> 
-		<br>
-		
+<!-- ================= PUBLICATIONS ================= -->
+<section id="publications">
+  <div class="wrap">
+    <div class="section-head"><h2>Select Publications</h2><span class="tag">// peer-reviewed</span></div>
+    <p class="pub-note">For the complete list, see my <a href="https://scholar.google.com/citations?user=ut1D3NYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> page.</p>
 
-		<p> For complete list of publications, please refer to my <a href="https://scholar.google.com/citations?user=ut1D3NYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> page.</p>
+    <div class="pub">
+      <div class="title">Towards Architecture-aware Hierarchical Communication Trees on Modern HPC Systems<span class="badge">BEST PAPER FINALIST</span></div>
+      <div class="authors">B. Ramesh, <span class="me">J. Hashmi</span>, S. Xu, A. Shafi, M. Ghazimirsaeed, M. Bayatpour, H. Subramoni, D. K. Panda</div>
+      <div class="venue">HiPC — 28th IEEE International Conference on High Performance Computing, Data, Analytics and Data Science, 2021</div>
+    </div>
 
+    <div class="pub">
+      <div class="title">GEMS: GPU Enabled Memory Aware Model Parallelism System for Distributed DNN Training</div>
+      <div class="authors">A. Jain, A. Awan, A. Aljuhani, <span class="me">J. Hashmi</span>, Q. Anthony, H. Subramoni, D. Panda, R. Machiraju, A. Parwani</div>
+      <div class="venue">SC — IEEE/ACM International Conference for High Performance Computing, Networking, Storage, and Analysis, 2020</div>
+    </div>
 
-		<table width="100%" align="center" border="0" cellpadding="0">
-		<tbody>
+    <div class="pub">
+      <div class="title">FALCON-X: Zero-copy MPI Derived Datatype Processing on Modern CPU and GPU Architectures</div>
+      <div class="authors"><span class="me">J. Hashmi</span>, C. Chu, S. Chakraborty, M. Bayatpour, H. Subramoni, D. K. Panda</div>
+      <div class="venue">Journal of Parallel and Distributed Computing (JPDC), Vol. 144, Oct 2020, pp. 1–13</div>
+    </div>
 
-			<tr> 
-			<td> 
-				<papertitle>Towards Architecture-aware Hierarchical Communication Trees on Modern HPC Systems</papertitle>
-				<br>
-				B. Ramesh, <b style="color:#003366">J. Hashmi</b>, S. Xu, A. Shafi, M. Ghazimirsaeed, M. Bayatpour, H. Subramoni, and DK Panda.
-				<br>
-				<em>28th IEEE International Conference on High Performance Computing, Data, Analytics and Data Science (HiPC)</em>, 2021.
-				<br>
-				<b style="color:rgb(214, 114, 114)">Best Paper Finalist</b>
-				<br>
-				<br>
-				<br>			
+    <div class="pub">
+      <div class="title">Machine-agnostic and Communication-aware Designs for MPI on Emerging Architectures</div>
+      <div class="authors"><span class="me">J. Hashmi</span>, S. Xu, B. Ramesh, M. Bayatpour, H. Subramoni, D. K. Panda</div>
+      <div class="venue">IPDPS — 34th IEEE International Parallel and Distributed Processing Symposium, 2020</div>
+      <div class="links"><a href="files/talks/ipdps20-short-virtual.pdf" target="_blank" rel="noopener noreferrer">Slides</a></div>
+    </div>
 
-				<papertitle>GEMS: GPU Enabled Memory Aware Model Parallelism System for Distributed DNN Training</papertitle>
-				<br>
-				A. Jain, A. Awan, A. Aljuhani, <b style="color:#003366">J. Hashmi</b>, Q. Anthony, H. Subramoni, D. Panda, R.  Machiraju, A. Parwani
-				<br>
-				<em>IEEE/ACM International Conference for High Performance Computing, Networking, Storage, and Analysis (SC)</em>, 2020.
-				<br>
-				<br>			
- 
-				<papertitle>FALCON-X: Zero-copy MPI Derived Datatype Processing on Modern CPU and GPU Architectures</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, C. Chu, S. Chakraborty, M. Bayatpour, H. Subramoni, and DK Panda.
-				<br>
-				<em>Journal of Parallel and Distributed Computing (JPDC), Volume 144, October 2020, Pages 1-13, doi.org/10.1016/j.jpdc.2020.05.008</em>, 2020.
-				<br>
-				<br>			
+    <div class="pub">
+      <div class="title">FALCON: Efficient Designs for Zero-copy MPI Datatype Processing on Emerging Architectures<span class="badge">BEST PAPER FINALIST</span></div>
+      <div class="authors"><span class="me">J. Hashmi</span>, S. Chakraborty, M. Bayatpour, H. Subramoni, D. K. Panda</div>
+      <div class="venue">IPDPS — 33rd IEEE International Parallel and Distributed Processing Symposium, 2019</div>
+      <div class="links"><a href="files/talks/ipdps19.pdf" target="_blank" rel="noopener noreferrer">Slides</a></div>
+    </div>
 
-				<papertitle>Machine-agnostic and Communication-aware Designs for MPI on Emerging Architectures</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, S. Xu, B. Ramesh, M. Bayatpour, H. Subramoni, and D. K. Panda.
-				<br>
-				<em>34th IEEE International Parallel and Distributed Processing Symposium (IPDPS)</em>, 2020.
-				<br>
-				<a href="files/talks/ipdps20-short-virtual.pdf">Slides</a> 
-				<br>
-				<br>			
+    <div class="pub">
+      <div class="title">Designing Efficient Shared Address Space Reduction Collectives for Multi-/Many-cores</div>
+      <div class="authors"><span class="me">J. Hashmi</span>, S. Chakraborty, M. Bayatpour, H. Subramoni, D. K. Panda</div>
+      <div class="venue">IPDPS — 32nd IEEE International Parallel and Distributed Processing Symposium, 2018</div>
+      <div class="links"><a href="files/talks/ipdps18.pdf" target="_blank" rel="noopener noreferrer">Slides</a></div>
+    </div>
 
-				<papertitle>FALCON: Efficient Designs for Zero-copy MPI Datatype Processing on Emerging Architectures</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, S. Chakraborty, M. Bayatpour, H. Subramoni, and DK Panda.
-				<br>
-				<em>33th IEEE International Parallel and Distributed Processing Symposium (IPDPS)</em>, 2019. 
-				<br>
-				<b style="color:rgb(214, 114, 114)">Best Paper Finalist</b>
-				<br>
-				<a href="files/talks/ipdps19.pdf">Slides</a> 
-				<br>
-				<br>			
+    <div class="pub">
+      <div class="title">Design and Characterization of Shared Address Space MPI Collectives on Modern Architectures</div>
+      <div class="authors"><span class="me">J. Hashmi</span>, S. Chakraborty, M. Bayatpour, H. Subramoni, D. K. Panda</div>
+      <div class="venue">CCGrid — 19th IEEE/ACM International Symposium on Cluster, Cloud, and Grid Computing, 2019</div>
+      <div class="links"><a href="files/talks/ccgrid19.pdf" target="_blank" rel="noopener noreferrer">Slides</a></div>
+    </div>
 
-				<papertitle>Designing Efficient Shared Address Space Reduction Collectives for Multi-/Many-cores</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, S. Chakraborty, M. Bayatpour, H. Subramoni, and DK Panda.
-				<br>
-				<em>32th IEEE International Parallel and Distributed Processing Symposium (IPDPS)</em>, 2018.
-				<br>
-				<a href="files/talks/ipdps18.pdf">Slides</a>
-				<br>
-				<br>			
+    <div class="pub">
+      <div class="title">Cooperative Rendezvous Protocols for Improved Performance and Overlap<span class="badge">BEST PAPER FINALIST</span></div>
+      <div class="authors">S. Chakraborty, M. Bayatpour, <span class="me">J. Hashmi</span>, H. Subramoni, D. K. Panda</div>
+      <div class="venue">SC — IEEE/ACM International Conference for High Performance Computing, Networking, Storage, and Analysis, 2018</div>
+    </div>
 
-				<papertitle>Design and Characterization of Shared Address Space MPI Collectives on Modern Architectures</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, S. Chakraborty, M. Bayatpour, H. Subramoni, and DK Panda.
-				<br>
-				<em>19th Annual IEEE/ACM International Symposium in Cluster, Cloud, and Grid Computing (CCGrid)</em>, 2019.
-				<br>
-				<a href="files/talks/ccgrid19.pdf">Slides</a>
-				<br>
-				<br>		
+    <div class="pub">
+      <div class="title">SALaR: Scalable and Adaptive Designs for Large Message Reduction Collectives<span class="badge">BEST PAPER AWARD</span></div>
+      <div class="authors">M. Bayatpour, S. Chakraborty, <span class="me">J. Hashmi</span>, H. Subramoni, D. K. Panda</div>
+      <div class="venue">CLUSTER — IEEE International Conference on Cluster Computing, 2018</div>
+    </div>
 
-				<papertitle>Cooperative Rendezvous Protocols for Improved Performance and Overlap</papertitle>
-				<br>
-				S. Chakraborty, M. Bayatpour, <b style="color:#003366">J. Hashmi</b>, H. Subramoni, and DK Panda.
-				<br>
-				<em>IEEE/ACM International Conference for High Performance Computing, Networking, Storage, and Analysis (SC)</em>, 2018.
-				<br>
-				<b style="color:rgb(214, 114, 114)">Best Paper Finalist</b>
-				<br>
-				<br>	
-				
-				<papertitle>SALaR: Scalable and Adaptive Designs for Large Message Reduction Collectives</papertitle>
-				<br>
-				M. Bayatpour, S. Chakraborty, <b style="color:#003366">J. Hashmi</b>, H. Subramoni, and DK Panda.
-				<br>
-				<em>IEEE International Conference on Cluster Computing (CLUSTER)</em>, 2018.
-				<br>
-				<b style="color:rgb(214, 114, 114)">Best Paper Award</b>
-				<br>
-				<br>
-								
-				<papertitle>S-Caffe: Co-designing MPI Runtimes and Caffe for Scalable Deep Learning on Modern GPU Clusters</papertitle>
-				<br>
-				M. Bayatpour, S. Chakraborty, <b style="color:#003366">J. Hashmi</b>, H. Subramoni, and DK Panda.
-				<br>
-				<em>22nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programmin (PPoPP)</em>, 2017.
-				<br>
-				<br>
-				
-				<papertitle>Kernel-assisted Communication Engine for MPI on Emerging Manycore Processors</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, K. Hamidouche, H. Subramoni, and DK Panda.
-				<br>
-				<em>24th IEEE International Conference on High Performance Computing, Data, Analytics and Data Science (HiPC)</em>, 2017.
-				<br>
-				<a href="files/talks/hipc17.pdf">Slides</a>
-				<br>
-				<br>
+    <div class="pub">
+      <div class="title">S-Caffe: Co-designing MPI Runtimes and Caffe for Scalable Deep Learning on Modern GPU Clusters</div>
+      <div class="authors">A. Awan, K. Hamidouche, <span class="me">J. Hashmi</span>, D. K. Panda</div>
+      <div class="venue">PPoPP — 22nd ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming, 2017</div>
+    </div>
 
-				<papertitle>Exploiting and Evaluating OpenSHMEM on KNL Architecture</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, M. Li, H. Subramoni, and DK Panda.
-				<br>
-				<em>4th Workshop on OpenSHMEM and Related Technologies (OpenSHMEM)</em>, 2017.
-				<br>
-				<a href="files/talks/oshm17.pdf">Slides</a>
-				<br>
-				<br>
+    <div class="pub">
+      <div class="title">Kernel-assisted Communication Engine for MPI on Emerging Manycore Processors</div>
+      <div class="authors"><span class="me">J. Hashmi</span>, K. Hamidouche, H. Subramoni, D. K. Panda</div>
+      <div class="venue">HiPC — 24th IEEE International Conference on High Performance Computing, Data, Analytics and Data Science, 2017</div>
+      <div class="links"><a href="files/talks/hipc17.pdf" target="_blank" rel="noopener noreferrer">Slides</a></div>
+    </div>
+  </div>
+</section>
 
-				<papertitle>Enabling Performance Efficient Runtime Support for Hybrid MPI+UPC++ Programming Models</papertitle>
-				<br>
-				<b style="color:#003366">J. Hashmi</b>, K. Hamidouche, and DK Panda.
-				<br>
-				<em>18th IEEE International Conference on High Performance Computing and Communications (HPCC)</em>, 2016.
-				<br>
-				<a href="files/talks/hpcc16.pdf">Slides</a>
-				<br>
-				<br>
+<!-- ================= SERVICE + UPDATES ================= -->
+<section id="updates">
+  <div class="wrap two-col">
+    <div>
+      <div class="section-head"><h2>Service</h2><span class="tag">// committees</span></div>
+      <ul class="feed">
+        <li><span class="d">SEP 2025</span>Technical Program Committee, IPDPS 2026 (Architecture Track)</li>
+        <li><span class="d">JUN 2025</span>Technical Program Committee, HOT Interconnects 2025</li>
+        <li><span class="d">JUN 2024</span>Technical Program Committee, HOT Interconnects 2024</li>
+        <li><span class="d">JUN 2023</span>Technical Program Committee, HOT Interconnects 2023</li>
+        <li><span class="d">JUN 2022</span>Technical Program Committee, HOT Interconnects 2022</li>
+        <li><span class="d">SEP 2021</span>Technical Program Committee, IPDPS 2022 (Architecture Track)</li>
+        <li><span class="d">AUG 2021</span>Technical Reviewer, IEEE MICRO journal</li>
+        <li><span class="d">JUN 2021</span>Technical Program Committee, HOT Interconnects 2021</li>
+      </ul>
+    </div>
+    <div>
+      <div class="section-head"><h2>Recent Updates</h2><span class="tag">// news</span></div>
+      <ul class="feed">
+        <li><span class="d">DEC 2021</span>Paper selected as Best Paper Finalist at HiPC '21</li>
+        <li><span class="d">SEP 2021</span>Architecture-aware communication trees paper accepted to HiPC '21</li>
+        <li><span class="d">MAR 2021</span>ROCm-aware MPI library work accepted to ISC '21</li>
+        <li><span class="d">MAR 2021</span>"BluesMPI" accepted to ISC '21</li>
+        <li><span class="d">OCT 2020</span>"Blink" accepted to HiPC '20</li>
+        <li><span class="d">JUN 2020</span>"GEMS" accepted to SC '20</li>
+        <li><span class="d">JUN 2020</span>Started full-time as Senior Research Associate at NBCL</li>
+        <li><span class="d">MAY 2020</span>Successfully defended Ph.D. thesis (<a href="files/talks/defense_talk.pdf" target="_blank" rel="noopener noreferrer">Slides</a>)</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="section-head"><h2>Education</h2><span class="tag">// 2007 — 2020</span></div>
+    <div class="edu-item">
+      <div class="deg">Ph.D. in Computer Science and Engineering (HPC)</div>
+      <div class="inst">The Ohio State University, Columbus, Ohio, USA — advised by <a href="https://web.cse.ohio-state.edu/~panda.2" target="_blank" rel="noopener noreferrer">Prof. D. K. Panda</a></div>
+      <div class="yr">2015 — 2020</div>
+    </div>
+    <div class="edu-item">
+      <div class="deg">M.S. in Computer Engineering</div>
+      <div class="inst">Ajou University, Suwon, South Korea — energy-efficient HPC on low-power ARM SoC clusters</div>
+      <div class="yr">2012 — 2014</div>
+    </div>
+    <div class="edu-item">
+      <div class="deg">B.S. in Information Technology</div>
+      <div class="inst">National University of Science and Technology (NUST), Islamabad, Pakistan</div>
+      <div class="yr">2007 — 2011</div>
+    </div>
+  </div>
+</section>
 
-			</td>			
-			
-			
-			</tr>
-		</tbody>
-		</table>
-  </td>
-  </tr>
-  </tbody>
-  </table>
-
-<hr>
-
-
-<footer>
-<center>
-        <h3>Jahanzeb Hashmi</h3>
-        <ul style='list-style: none; margin-left: -40px;font-size:20px;'>
-            <li style="font-size:16px">
-<!--              <a class="fa fa-github" href="https://github.com/jahanzeb-hashmi">
-                <span class="username" style='font-family: Arial'>GitHub</span>
-              </a>
-			  &nbsp;/&nbsp;
--->
-			  <a class="fa fa-linkedin" href="https://www.linkedin.com/in/jahanzebhashmi/">
-                <span class="username" style='font-family: Arial'>LinkedIn</span>
-              </a>
-			  &nbsp;/&nbsp;
-			  <a class="fa fa-twitter" href="https://twitter.com/JM_Hashmi">
-                <span class="username" style='font-family: Arial'>Twitter</span>
-              </a>			  
-            </li>
-          </ul>
-		  
-</center>
+<!-- ================= FOOTER ================= -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="name">Jahanzeb Hashmi</div>
+    <div class="social-row">
+      <a href="https://www.linkedin.com/in/jahanzebhashmi/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i> LinkedIn</a>
+      <a href="https://twitter.com/JM_Hashmi" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i> Twitter</a>
+      <a href="https://scholar.google.com/citations?user=ut1D3NYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fa fa-graduation-cap"></i> Scholar</a>
+    </div>
+    <div class="copy">&copy; <span id="yr"></span> Jahanzeb Hashmi</div>
+  </div>
 </footer>
 
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
 
-
-
-
-<div class="jvectormap-tip"></div></body></html>
+</body>
+</html>
